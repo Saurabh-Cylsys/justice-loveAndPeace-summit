@@ -9,14 +9,7 @@
   #p5 .card {
     font-size: 14px
   }
-  .index .section1 {
-    background: url(../images/index/bannermob.gif);
-    background-size: cover; /* Ensures the image covers the section while maintaining aspect ratio */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat;
-    height: 79.4vh; /* Keeps the height relative to the viewport */
-  }
-
+ 
   .main-body .scroll {
     min-height: 90vh;
   }
@@ -42,11 +35,11 @@
     text-align: center !important;
   }
   .index .section1 {
-    background: url(../images/index/bannermob.gif);
+    /* background: url(../images/index/bannermob.gif); */
     background-size: cover; /* Ensures the image covers the section while maintaining aspect ratio */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat;
-    min-height: 67vh; /* Keeps the height relative to the viewport */
+    min-height: 65vh; /* Keeps the height relative to the viewport */
   }
 }
 
@@ -55,11 +48,11 @@
 
 @media (min-width: 375px) {
   .index .section1 {
-    background: url(../images/index/bannermob.gif);
+    /* background: url(../images/index/bannermob.gif); */
     background-size: cover; /* Ensures the image covers the section while maintaining aspect ratio */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat;
-    min-height: 79vh; /* Keeps the height relative to the viewport */
+    min-height: 76vh; /* Keeps the height relative to the viewport */
   }
 }
 
@@ -79,11 +72,11 @@
     min-height: 100vh;
   }
   .index .section1 {
-    background: url(../images/index/bannermob.gif);
+    /* background: url(../images/index/bannermob.gif); */
     background-size: cover; /* Ensures the image covers the section while maintaining aspect ratio */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat;
-    min-height: 90vh; /* Keeps the height relative to the viewport */
+    min-height: 86vh; /* Keeps the height relative to the viewport */
   }
 }
 
@@ -94,9 +87,9 @@
     min-height: 50vh;
   }
   .index .section1 {
-    background-image: url(../images/index/banner.gif);
+    /* background-image: url(../images/index/banner.gif); */
     /* background-size: 90% 100%; */
-    background-size: 85% 100%;
+    /* background-size: 85% 100%; */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat;
     min-height: 65vh; /* Keeps the height relative to the viewport */
@@ -128,12 +121,12 @@
     min-height: 65vh;
   }
   .index .section1 {
-    background-image: url(../images/index/banner.gif);
+    /* background-image: url(../images/index/banner.gif); */
     /* background-size: 90% 100%; */
     background-size: 85% 100%;
     background-position: center; /* Centers the image */
     background-repeat: no-repeat;
-    min-height: 90vh; /* Keeps the height relative to the viewport */
+    min-height: 100vh; /* Keeps the height relative to the viewport */
   }
 }
 
@@ -191,7 +184,7 @@
     font-size: 14px;
   }
 
-  .index .section1 .bgColor {
+  .index .bgColor {
     background: var(--gradient5);
   }
 
@@ -310,7 +303,7 @@
     font-size: 16px;
   }
   .yT {
-    height: 322px;
+    height: 35vh;
   }
 
   .chairman {
@@ -535,7 +528,7 @@
 }
 @media (max-width: 425px) {
 
-  .index .section1 .bgColor {
+  .index .bgColor {
     background: var(--gradient5);
   }
 
@@ -646,7 +639,7 @@
     font-size: 16px;
   }
   .yT {
-    height: 322px;
+    height: 35vh;
   }
 
   .chairman {

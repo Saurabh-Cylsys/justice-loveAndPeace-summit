@@ -466,7 +466,7 @@
                   </div>
                 </div>
               </li>
-              <li class="nav-item active" routerLinkActive="active">
+              <li class="nav-item" routerLinkActive="active">
                 <div class="hover-dropdown">
                   <a class="dropbtn nav-link" href="DownloadCenter.html">
                     Download Center
@@ -573,8 +573,8 @@
       <div class="gallery section5">
         <div class="container">
           <div class="row">
-            <div class="col-md-12 p-0">
-              <ul class="nav nav-tabs col-4" id="myTab" role="tablist">
+            <div class="col-md-4 m-auto p-0">
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item col-4" role="presentation">
                   <button
                     class="nav-link active"
@@ -611,7 +611,8 @@
                     />
                   </button>
                 </li>
-              </ul>
+              </ul></div>
+              <div class="col-md-12">
               <div class="tab-content" id="myTabContent">
                 <div
                   class="tab-pane fade show active"
@@ -622,13 +623,10 @@
                 >
                   <div class="row">
                     <div class="col-md-12">
-                      <div class="gallery-container">
-                        <!-- Images with placeholder and lazy loading -->
                         <div id="imageContainer"></div>
-                        <!-- Repeat for other images -->
-                      </div>
                     </div>
                   </div>
+                  
                 </div>
                 <div
                   class="tab-pane fade"
@@ -637,7 +635,7 @@
                   aria-labelledby="video"
                   tabindex="0"
                 >
-                  ...
+                  <div class="card" style="height: 50vh;"></div>
                 </div>
               </div>
             </div>
@@ -724,24 +722,62 @@
     <script src="assets/UIComponents/js/script.js"></script>
     <script src="assets/UIComponents/js/fullpage.js"></script>
 
-    <!-- <script>
+    <script>
       const folderPath = "assets/UIComponents/images/media/";
+  const images = [];
 
-      const images = [];
+  for (let i = 260; i <= 777; i++) {
+    let filename = `MAN00${i}.jpg`;
+    images.push(filename);
+  }
 
-      for (let i = 260; i <= 777; i++) {
-        let filename = `MAN00${i}.jpg`;
-        images.push(filename);
-      }
+  const container = document.getElementById("imageContainer");
 
-      const container = document.getElementById("imageContainer");
-      images.forEach((image) => {
-        let imgElement = document.createElement("img");
-        imgElement.src = folderPath + image;
-        imgElement.style.width = "25%";
-        imgElement.style.margin = "10px";
-        container.appendChild(imgElement);
+  images.forEach((image) => {
+    let imgElement = document.createElement("img");
+    imgElement.src = folderPath + image;
+    imgElement.style.width = "100%";
+    imgElement.style.margin = "1px";
+    imgElement.style.objectFit = "cover";
+    imgElement.style.height = "40vh";
+
+    // Add lazy loading to images
+    imgElement.setAttribute("loading", "lazy");
+
+    // Remove image if it fails to load
+    imgElement.onerror = function () {
+      this.style.display = "none";
+    };
+
+    container.appendChild(imgElement);
+  });
+    </script>
+    <!-- <script>
+      document.addEventListener("DOMContentLoaded", function() {
+  const lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+  if ("IntersectionObserver" in window) {
+    const lazyImageObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          const lazyImage = entry.target;
+          lazyImage.src = lazyImage.dataset.src;
+          lazyImage.classList.remove("lazy");
+          lazyImage.classList.add("lazy-loaded");
+          lazyImageObserver.unobserve(lazyImage);
+        }
       });
+    });
+ 
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage);
+    });
+  } else {
+    // Fallback for older browsers
+    lazyImages.forEach(function(lazyImage) {
+      lazyImage.src = lazyImage.dataset.src;
+    });
+  }
+});
     </script> -->
   </body>
 </html>

@@ -91,12 +91,11 @@ header .nav-item .nav-link.active {
 }
 
 .index .section1 {
-  background-image: url(../images/index/banner.gif);
-  /* background-size: 90% 100%; */
+  /* background-image: url(../images/index/banner.gif);
   background-size: 85% 100%;
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat;
-  min-height: 90vh; /* Keeps the height relative to the viewport */
+  background-position: center; 
+  background-repeat: no-repeat; */
+  min-height: 100vh; 
 }
 
 .index .section1 .logo {
@@ -2906,7 +2905,7 @@ a{
 
 /* ### 2. CSS Styling
 ```css */
-.gallery-container {
+#imageContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
