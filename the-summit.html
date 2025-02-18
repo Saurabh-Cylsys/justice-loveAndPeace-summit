@@ -1172,19 +1172,17 @@
               </div>
 
               <div class="col-12">
-                <!-- <div class="table-responsive"> -->
-                  <table class="table" id="dataTable">
-                    <thead>
-                        <tr>
-                            <th style="width: 50%">Name</th>
-                            <th style="width: 50%">Profession / Position</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Data will be dynamically inserted here -->
-                    </tbody>
-                  </table>
-                <!-- </div> -->
+                <table class="table" id="dataTable">
+                  <thead>
+                    <tr>
+                      <th style="width: 30%">Name</th>
+                      <th style="width: 70%">Profession / Position</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Data will be dynamically inserted here -->
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
@@ -4456,14 +4454,14 @@
     <script>
     async function fetchData() {
     try {
-        const response = await fetch('https://devglobaljusticeapis.cylsys.com/api/v1/invite_speakers');
+        const response = await fetch('https://api.justice-love-peace.com/api/v1/invite_speakers');
         const data = await response.json();
 
         if (data.success && data.data) {
             const tableBody = document.querySelector("#dataTable tbody");
             tableBody.innerHTML = ""; // Clear existing content
 
-            // Find Virat Kohli's index
+            // Find Virat Kohli's index 
             const kohliIndex = data.data.findIndex(speaker => 
                 speaker.Name && speaker.Name.toLowerCase().includes('virat kohli')
             );
@@ -4476,8 +4474,8 @@
             speakersToShow.forEach(speaker => {
                 const row = `
                     <tr>
-                        <td>${speaker.Name || 'N/A'}</td>
-                        <td>${speaker.Profession_Position || 'N/A'}</td>
+                        <td style="width: 30%">${speaker.Name || 'N/A'}</td>
+                        <td style="width: 70%">${speaker.Profession_Position || 'N/A'}</td>
                     </tr>
                 `;
                 tableBody.innerHTML += row;
