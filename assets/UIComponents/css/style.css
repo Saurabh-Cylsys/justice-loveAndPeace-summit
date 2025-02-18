@@ -2998,10 +2998,10 @@ a{
     margin-top: 20px;
 }
 
-.table-responsive {
+/* .table-responsive {
     max-height: 500px;
     position: relative;
-}
+} */
 
 #dataTable thead {
     position: sticky;
